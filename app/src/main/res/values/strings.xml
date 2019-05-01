@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Gwynder Central</string>
-    <string name="title_routes">Routes</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_settings">Settings</string>
-    <string name="app_name_login">Gwynder Central - Login</string>
-</resources>
