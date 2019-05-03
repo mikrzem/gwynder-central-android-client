@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".login.fragments.BeginAuthorizationFragment" android:padding="16dp">
+
+
+    <TextView
+            android:text="@string/authorization_instructions_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    <TextView
+            android:text="@string/authorization_instructions_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    <TextView
+            android:text="@string/authorization_instructions_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    <TextView
+            android:text="@string/authorization_instructions_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:labelFor="@id/request_code"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/request_code" android:layout_weight="1" android:importantForAutofill="no"/>
+    <Button
+            android:text="@string/confirm_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/confirm_code" android:layout_weight="1"/>
+
+</LinearLayout>

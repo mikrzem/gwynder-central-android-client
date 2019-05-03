@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Gwynder Central</string>
+    <string name="operation_in_progress">Operation in progress. Please wait...</string>
+    <string name="title_routes">Routes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="authorization_instructions_1">1. Go to https://gwynder.net.pl</string>
+    <string name="authorization_instructions_2">2. Log in or create new account</string>
+    <string name="authorization_instructions_3">3. Go to Authorized applications and request new authorization code
+    </string>
+    <string name="authorization_instructions_4">4. Write provided code below</string>
+    <string name="confirm_code">Confirm code</string>
 </resources>

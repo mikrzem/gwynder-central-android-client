@@ -10,7 +10,8 @@ class RestClient(
     private val feedback: Feedback,
     private val configuration: CentralConfiguration
 ) {
-    private val baseUrl = "https://gwynder.net.pl/api/"
+//    private val baseUrl = "https://gwynder.net.pl/api/" // server
+    private val baseUrl = "http://10.0.0.68/api/" // local
 
     private val queue = Volley.newRequestQueue(context)
 
