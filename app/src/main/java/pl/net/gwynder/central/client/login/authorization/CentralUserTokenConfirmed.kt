@@ -1,6 +1,9 @@
 package pl.net.gwynder.central.client.login.authorization
 
-class CentralUserTokenConfirmed(
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class CentralUserTokenConfirmed(
         val code: String,
         val authorizationToken: String
 )

@@ -32,12 +32,16 @@
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:ems="10"
-            android:id="@+id/request_code" android:layout_weight="1" android:importantForAutofill="no"/>
+            android:id="@+id/request_code"
+            android:layout_weight="1"
+            android:importantForAutofill="no"/>
     <Button
             android:text="@string/confirm_code"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/confirm_code" android:layout_weight="1"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/confirm_code"
+            android:layout_weight="1"/>
 
 </LinearLayout>

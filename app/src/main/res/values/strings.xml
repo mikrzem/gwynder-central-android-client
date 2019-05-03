@@ -11,4 +11,10 @@
     </string>
     <string name="authorization_instructions_4">4. Write provided code below</string>
     <string name="confirm_code">Confirm code</string>
+    <string name="confirmation_instructions_1">Confirm that below code is equals to on show on authorization screen
+    </string>
+    <string name="confirmation_instructions_2">If the code matches on in central authorize application and continue
+    </string>
+    <string name="continue_message">Continue</string>
+    <string name="not_yet_authorized">Application isn\'t yet authorized</string>
 </resources>

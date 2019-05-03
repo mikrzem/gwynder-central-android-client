@@ -15,6 +15,6 @@ val centralModule = module {
     single { Feedback(get(), get()) }
     single { CentralConfiguration(get()) }
     single { RestClient(get(), get(), get()) }
-    single { TokenExchange(get(), get()) }
+    single { TokenExchange(get(), get(), get(), get()) }
 
 }

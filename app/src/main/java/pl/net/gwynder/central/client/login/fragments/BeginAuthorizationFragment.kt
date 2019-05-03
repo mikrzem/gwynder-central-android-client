@@ -9,19 +9,25 @@ import kotlinx.android.synthetic.main.fragment_begin_authorization.*
 import org.koin.android.ext.android.inject
 import pl.net.gwynder.central.client.R
 import pl.net.gwynder.central.client.login.authorization.TokenExchange
+import pl.net.gwynder.central.client.utils.CentralConfiguration
 import pl.net.gwynder.central.client.utils.NavigationSupport
 import pl.net.gwynder.central.client.utils.base.BaseFragment
 
 class BeginAuthorizationFragment : BaseFragment() {
 
-    val exchange: TokenExchange by inject()
+    private val exchange: TokenExchange by inject()
 
-    val navigation: NavigationSupport by inject()
+    private val navigation: NavigationSupport by inject()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private val configuration: CentralConfiguration by inject()
+
+    override fun onStart() {
+        super.onStart()
         confirm_code.setOnClickListener {
-
+            exchange.confirmCode(request_code.text.toString()) { confirmation ->
+                configuration.authorizationToken = confirmation.authorizationToken
+                navigation.show(AuthorizationConfirmedFragment.newInstance(confirmation.code))
+            }
         }
     }
 
