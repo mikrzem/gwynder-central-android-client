@@ -3,6 +3,9 @@
           package="pl.net.gwynder.central.client">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-feature android:name="android.hardware.location.gps"/>
 
     <application
             android:name=".CentralApplication"
@@ -21,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <service android:name=".routes.recording.LocationRecordingService"/>
     </application>
 
 </manifest>

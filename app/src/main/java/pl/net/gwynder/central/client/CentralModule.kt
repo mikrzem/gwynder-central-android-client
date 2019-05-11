@@ -3,6 +3,8 @@ package pl.net.gwynder.central.client
 import androidx.room.Room
 import org.koin.dsl.module
 import pl.net.gwynder.central.client.login.authorization.TokenExchange
+import pl.net.gwynder.central.client.routes.recording.LocationRecordingServiceConnection
+import pl.net.gwynder.central.client.routes.storage.access.StoredEventStorage
 import pl.net.gwynder.central.client.utils.ActivityContainer
 import pl.net.gwynder.central.client.utils.CentralConfiguration
 import pl.net.gwynder.central.client.utils.Feedback
@@ -26,5 +28,8 @@ val centralModule = module {
             .allowMainThreadQueries()
             .build()
     }
+
+    single { LocationRecordingServiceConnection() }
+    single { StoredEventStorage(get(), get()) }
 
 }
