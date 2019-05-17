@@ -8,6 +8,7 @@ import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.*
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import org.koin.android.ext.android.inject
 import pl.net.gwynder.central.client.R
@@ -66,6 +67,7 @@ class LocationRecordingService : Service() {
     }
 
     private fun onLocation(location: Location) {
+        Log.i("LocationRecordingService", "Location: ${location.latitude}, ${location.longitude}")
         eventStorage.savePoint(
             location.latitude,
             location.longitude,

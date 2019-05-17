@@ -12,6 +12,11 @@
               android:name="pl.net.gwynder.central.client.routes.fragments.RoutesCurrentStatusFragment"
               android:layout_margin="8dp"
               android:id="@+id/current_status_fragment"/>
+    <fragment android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:name="pl.net.gwynder.central.client.routes.fragments.RoutesLatestFragment"
+              android:layout_margin="8dp"
+              android:id="@+id/latest_routes_fragment"/>
 
 
 </LinearLayout>

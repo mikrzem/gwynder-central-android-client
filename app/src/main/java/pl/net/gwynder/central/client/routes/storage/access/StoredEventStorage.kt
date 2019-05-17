@@ -1,5 +1,6 @@
 package pl.net.gwynder.central.client.routes.storage.access
 
+import androidx.lifecycle.LiveData
 import pl.net.gwynder.central.client.routes.storage.entities.StoredEvent
 import pl.net.gwynder.central.client.routes.storage.entities.StoredEventPoint
 import pl.net.gwynder.central.client.utils.CentralConfiguration
@@ -36,6 +37,22 @@ class StoredEventStorage(
             current()
         )
         points.insert(point)
+    }
+
+    fun selectLatest(): LiveData<List<StoredEvent>> {
+        return events.selectLatest()
+    }
+
+    fun selectAll(): LiveData<List<StoredEvent>> {
+        return events.selectAll()
+    }
+
+    fun getEvent(id: Long): StoredEvent {
+        return events.get(id)
+    }
+
+    fun selectPoints(event: StoredEvent): LiveData<List<StoredEventPoint>> {
+        return points.select(event.id)
     }
 
 }
